@@ -12,6 +12,7 @@
 		51C2CBE02ADEBE4F0041A034 /* CryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C2CBDF2ADEBE4F0041A034 /* CryptoManager.swift */; };
 		51C2CBE22ADEBED50041A034 /* CryptoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C2CBE12ADEBED50041A034 /* CryptoData.swift */; };
 		51C2CBE72ADED0F90041A034 /* APIEnumExemple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C2CBE62ADED0F90041A034 /* APIEnumExemple.swift */; };
+		51C2CBEB2ADED5F10041A034 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C2CBEA2ADED5F10041A034 /* API.swift */; };
 		51CB25EE2ADDF3CD00282515 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB25ED2ADDF3CD00282515 /* AppDelegate.swift */; };
 		51CB25F02ADDF3CD00282515 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB25EF2ADDF3CD00282515 /* SceneDelegate.swift */; };
 		51CB25F72ADDF3CF00282515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51CB25F62ADDF3CF00282515 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		51C2CBDF2ADEBE4F0041A034 /* CryptoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoManager.swift; sourceTree = "<group>"; };
 		51C2CBE12ADEBED50041A034 /* CryptoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoData.swift; sourceTree = "<group>"; };
 		51C2CBE62ADED0F90041A034 /* APIEnumExemple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnumExemple.swift; sourceTree = "<group>"; };
+		51C2CBEA2ADED5F10041A034 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		51CB25EA2ADDF3CD00282515 /* cryptoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51CB25ED2ADDF3CD00282515 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51CB25EF2ADDF3CD00282515 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		51C2CBE32ADEBF560041A034 /* enum */ = {
 			isa = PBXGroup;
 			children = (
+				51C2CBEA2ADED5F10041A034 /* API.swift */,
 				51C2CBE62ADED0F90041A034 /* APIEnumExemple.swift */,
 			);
 			path = enum;
@@ -200,6 +203,7 @@
 				51C2CBE02ADEBE4F0041A034 /* CryptoManager.swift in Sources */,
 				51CB25EE2ADDF3CD00282515 /* AppDelegate.swift in Sources */,
 				51CB25F02ADDF3CD00282515 /* SceneDelegate.swift in Sources */,
+				51C2CBEB2ADED5F10041A034 /* API.swift in Sources */,
 				51C2CBE72ADED0F90041A034 /* APIEnumExemple.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
