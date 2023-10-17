@@ -51,28 +51,30 @@ class MainView: UIView {
     lazy var coinLabel: UILabel = {
        let coinLabel = UILabel()
         coinLabel.translatesAutoresizingMaskIntoConstraints = false
-        coinLabel.text = "0000.00"
         coinLabel.textColor = UIColor(resource: .allLabel)
         coinLabel.textAlignment = .center
-        coinLabel.font = .boldSystemFont(ofSize: 26)
+        coinLabel.font = .boldSystemFont(ofSize: 28)
         coinLabel.numberOfLines = 1
+        coinLabel.adjustsFontSizeToFitWidth = true
+        coinLabel.minimumScaleFactor = 0.5
         return coinLabel
     }()
     lazy var coinDescLabel: UILabel = {
        let descLabel = UILabel()
         descLabel.translatesAutoresizingMaskIntoConstraints = false
-        descLabel.text = "BRL"
         descLabel.textColor = UIColor(resource: .allLabel)
-        descLabel.textAlignment = .left
-        descLabel.font = .boldSystemFont(ofSize: 26)
+        descLabel.textAlignment = .center
+        descLabel.font = .boldSystemFont(ofSize: 28)
         descLabel.numberOfLines = 1
+        descLabel.adjustsFontSizeToFitWidth = true
+        descLabel.minimumScaleFactor = 0.5
         return descLabel
     }()
     
     
     let view2: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.green
+//        view.backgroundColor = UIColor.green
         return view
     }()
     
@@ -139,8 +141,8 @@ class MainView: UIView {
             
             //btcView
             btcView.topAnchor.constraint(equalTo: appLabel.bottomAnchor, constant: 30),
-            btcView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -40),
-            btcView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 40),
+            btcView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30),
+            btcView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
             btcView.bottomAnchor.constraint(equalTo: view1.bottomAnchor, constant: -30),
             
             //btcIcon
@@ -152,13 +154,13 @@ class MainView: UIView {
             //coinLabel
             
             coinLabel.topAnchor.constraint(equalTo: btcView.topAnchor, constant: 10),
-            coinLabel.leadingAnchor.constraint(equalTo: btcIcon.trailingAnchor, constant: 5),
+            coinLabel.leadingAnchor.constraint(equalTo: btcIcon.trailingAnchor),
             coinLabel.trailingAnchor.constraint(equalTo: coinDescLabel.leadingAnchor, constant: -5),
             coinLabel.bottomAnchor.constraint(equalTo: btcView.bottomAnchor, constant: -10),
             
             //descLabel
             coinDescLabel.topAnchor.constraint(equalTo: btcView.topAnchor, constant: 10),
-            coinDescLabel.leadingAnchor.constraint(equalTo: coinLabel.trailingAnchor),
+            coinDescLabel.leadingAnchor.constraint(equalTo: btcView.trailingAnchor, constant: -70),
             coinDescLabel.trailingAnchor.constraint(equalTo: btcView.trailingAnchor, constant: -10),
             coinDescLabel.bottomAnchor.constraint(equalTo: btcView.bottomAnchor, constant: -10),
             

@@ -8,9 +8,9 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     
     var screen: MainView?
+    var cryptoManager = CryptoManager()
     
     override func loadView() {
         screen = MainView()
@@ -22,8 +22,29 @@ class MainViewController: UIViewController {
         
         screen?.coinPickerView.dataSource = self
         screen?.coinPickerView.delegate = self
+        cryptoManager.delegate = self
+        
+        cryptoManager.getCoinPrice(for: cryptoManager.currencyArray[0])
+
     }
 }
+//MARK: - CoinManagerDelegate
+
+extension MainViewController: CryptoManagerDelegate {
+    
+    func didUpdatePrice(price: String, currency: String) {
+        
+        DispatchQueue.main.async {
+            self.screen?.coinLabel.text = price
+            self.screen?.coinDescLabel.text = currency
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+}
+
 //MARK: - UIPickerView DataSource & Delegate
 
 extension MainViewController: UIPickerViewDataSource, UIPickerViewDelegate {
@@ -33,16 +54,15 @@ extension MainViewController: UIPickerViewDataSource, UIPickerViewDelegate {
       }
       
       func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-          return currencyArray.count
+          return cryptoManager.currencyArray.count
       }
       
       func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-          return currencyArray[row]
+          return cryptoManager.currencyArray[row]
       }
       
       func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-          let selectedCurrency = currencyArray[row]
-//          coinManager.getCoinPrice(for: selectedCurrency)
-          screen?.coinDescLabel.text = selectedCurrency
+          let selectedCurrency = cryptoManager.currencyArray[row]
+          cryptoManager.getCoinPrice(for: selectedCurrency)
       }
 }

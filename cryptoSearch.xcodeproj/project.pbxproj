@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		51C2CBDC2ADDF6610041A034 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C2CBDB2ADDF6610041A034 /* MainViewController.swift */; };
 		51C2CBDE2ADDF8370041A034 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C2CBDD2ADDF8370041A034 /* MainView.swift */; };
+		51C2CBE02ADEBE4F0041A034 /* CryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C2CBDF2ADEBE4F0041A034 /* CryptoManager.swift */; };
+		51C2CBE22ADEBED50041A034 /* CryptoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C2CBE12ADEBED50041A034 /* CryptoData.swift */; };
+		51C2CBE52ADEBF840041A034 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C2CBE42ADEBF840041A034 /* API.swift */; };
+		51C2CBE72ADED0F90041A034 /* APIEnumExemple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C2CBE62ADED0F90041A034 /* APIEnumExemple.swift */; };
 		51CB25EE2ADDF3CD00282515 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB25ED2ADDF3CD00282515 /* AppDelegate.swift */; };
 		51CB25F02ADDF3CD00282515 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB25EF2ADDF3CD00282515 /* SceneDelegate.swift */; };
 		51CB25F72ADDF3CF00282515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51CB25F62ADDF3CF00282515 /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 /* Begin PBXFileReference section */
 		51C2CBDB2ADDF6610041A034 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		51C2CBDD2ADDF8370041A034 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		51C2CBDF2ADEBE4F0041A034 /* CryptoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoManager.swift; sourceTree = "<group>"; };
+		51C2CBE12ADEBED50041A034 /* CryptoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoData.swift; sourceTree = "<group>"; };
+		51C2CBE42ADEBF840041A034 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		51C2CBE62ADED0F90041A034 /* APIEnumExemple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnumExemple.swift; sourceTree = "<group>"; };
 		51CB25EA2ADDF3CD00282515 /* cryptoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51CB25ED2ADDF3CD00282515 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51CB25EF2ADDF3CD00282515 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +66,8 @@
 		51C2CBD82ADDF4710041A034 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				51C2CBDF2ADEBE4F0041A034 /* CryptoManager.swift */,
+				51C2CBE12ADEBED50041A034 /* CryptoData.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -76,6 +86,15 @@
 				51C2CBDB2ADDF6610041A034 /* MainViewController.swift */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		51C2CBE32ADEBF560041A034 /* enum */ = {
+			isa = PBXGroup;
+			children = (
+				51C2CBE42ADEBF840041A034 /* API.swift */,
+				51C2CBE62ADED0F90041A034 /* APIEnumExemple.swift */,
+			);
+			path = enum;
 			sourceTree = "<group>";
 		};
 		51CB25E12ADDF3CD00282515 = {
@@ -97,6 +116,7 @@
 		51CB25EC2ADDF3CD00282515 /* cryptoSearch */ = {
 			isa = PBXGroup;
 			children = (
+				51C2CBE32ADEBF560041A034 /* enum */,
 				51C2CBD62ADDF45C0041A034 /* application */,
 				51C2CBD72ADDF4660041A034 /* resource */,
 				51C2CBD82ADDF4710041A034 /* model */,
@@ -179,8 +199,12 @@
 			files = (
 				51C2CBDC2ADDF6610041A034 /* MainViewController.swift in Sources */,
 				51C2CBDE2ADDF8370041A034 /* MainView.swift in Sources */,
+				51C2CBE22ADEBED50041A034 /* CryptoData.swift in Sources */,
+				51C2CBE02ADEBE4F0041A034 /* CryptoManager.swift in Sources */,
 				51CB25EE2ADDF3CD00282515 /* AppDelegate.swift in Sources */,
 				51CB25F02ADDF3CD00282515 /* SceneDelegate.swift in Sources */,
+				51C2CBE72ADED0F90041A034 /* APIEnumExemple.swift in Sources */,
+				51C2CBE52ADEBF840041A034 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
