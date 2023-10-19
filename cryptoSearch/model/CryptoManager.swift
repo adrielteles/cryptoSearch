@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CryptoManagerDelegate {
-    func didUpdatePrice(price: String, currency: String)
+    func didUpdatePrice(price: String, currency: String, coinTarget: String)
     func didFailWithError(error: Error)
 }
 
@@ -19,17 +19,23 @@ struct CryptoManager {
     let baseURL = API.BASE_URL
     let apiKey = API.API_KEY
 
+    let targetArray = ["BTC","ETH","LTC","USD"]
     let currencyArray = ["BRL","AUD" ,"CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     
-    func getCoinPrice(for currency: String) {
+    func getCoinPrice(to coinTarget:String, for currency: String) {
         
-        let urlString = "\(baseURL)/\(currency)?apikey=\(apiKey)"
+        let urlString = "\(baseURL)\(coinTarget)/\(currency)?apikey=\(apiKey)"
         print(urlString)
         
         if let url = URL(string: urlString) {
             
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
+                
+                defer {
+                    session.invalidateAndCancel()
+                }
+                
                 if error != nil {
                     self.delegate?.didFailWithError(error: error!)
                     return
@@ -38,7 +44,7 @@ struct CryptoManager {
                 if let safeData = data {
                     if let bitcoinPrice = self.parseJSON(safeData) {
                         let priceString = String(format: "%.2f", bitcoinPrice)
-                        self.delegate?.didUpdatePrice(price: priceString, currency: currency)
+                        self.delegate?.didUpdatePrice(price: priceString, currency: currency, coinTarget: coinTarget)
                     }
                 }
             }
