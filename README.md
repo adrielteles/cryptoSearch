@@ -7,6 +7,8 @@ O projeto foi desenvolvido em swift com uso de view code e constraints para cria
 Foi ultilizada a API gratuita:  https://www.coinapi.io/ para busca de informações
 
 
-##Preview
+## Preview
 
-<img width="400" alt="CryptoLight" src="https://github.com/adrielteles/cryptoSearch/assets/51987683/a193ba16-bd47-48d8-bfc3-7b630b5237dc"> <img width="400" alt="CryptoDark" src="https://github.com/adrielteles/cryptoSearch/assets/51987683/0e4eaa16-559d-4607-a4e1-51338a905b2e">
+
+Light Mode
+<img width="400" alt="CryptoLight" src="https://github.com/adrielteles/cryptoSearch/assets/51987683/a193ba16-bd47-48d8-bfc3-7b630b5237dc"> Dark Mode<img width="400" alt="CryptoDark" src="https://github.com/adrielteles/cryptoSearch/assets/51987683/0e4eaa16-559d-4607-a4e1-51338a905b2e">
