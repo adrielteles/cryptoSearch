@@ -43,8 +43,9 @@ struct CryptoManager {
                 
                 if let safeData = data {
                     if let bitcoinPrice = self.parseJSON(safeData) {
-                        let priceString = String(format: "%.2f", bitcoinPrice)
-                        self.delegate?.didUpdatePrice(price: priceString, currency: currency, coinTarget: coinTarget)
+                        
+                        
+                        self.delegate?.didUpdatePrice(price: formatCurrency(bitcoinPrice), currency: currency, coinTarget: coinTarget)
                     }
                 }
             }
@@ -63,6 +64,21 @@ struct CryptoManager {
         } catch {
             delegate?.didFailWithError(error: error)
             return nil
+        }
+    }
+    
+    func formatCurrency(_ price: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+        formatter.usesGroupingSeparator = true
+        let priceString = String(format: "%.2f", price)
+        
+        if let formattedString = formatter.string(from: NSNumber(value: Double(priceString)!)) {
+            return String(formattedString)
+        } else {
+            return priceString
         }
     }
     
