@@ -9,5 +9,4 @@ Foi ultilizada a API gratuita:  https://www.coinapi.io/ para busca de informa√ß√
 
 ##Preview
 
-<img width="534" alt="CryptoLight" src="https://github.com/adrielteles/cryptoSearch/assets/51987683/a193ba16-bd47-48d8-bfc3-7b630b5237dc">
-<img width="534" alt="CryptoDark" src="https://github.com/adrielteles/cryptoSearch/assets/51987683/0e4eaa16-559d-4607-a4e1-51338a905b2e">
+<img width="400" alt="CryptoLight" src="https://github.com/adrielteles/cryptoSearch/assets/51987683/a193ba16-bd47-48d8-bfc3-7b630b5237dc"> <img width="400" alt="CryptoDark" src="https://github.com/adrielteles/cryptoSearch/assets/51987683/0e4eaa16-559d-4607-a4e1-51338a905b2e">
